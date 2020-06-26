@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bIi-nk-vIM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MapViewController" customModule="InsideThe5K" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZq-t3-1sz">
+                                <rect key="frame" x="24" y="52" width="366" height="96.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bIh-kc-Qar">
+                                <rect key="frame" x="32" y="60" width="350" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Constantly checks your location, even when the app is closed, so that you can get a warning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcE-vZ-0pN">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UUa-wi-BTZ">
+                                        <rect key="frame" x="0.0" y="49.5" width="350" height="32"/>
+                                        <segments>
+                                            <segment title="Locate On"/>
+                                            <segment title="Locate Off"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="trackingControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="O9O-WU-er5"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="rEk-LJ-2GK">
+                                <rect key="frame" x="57.5" y="761" width="299" height="32"/>
+                                <segments>
+                                    <segment title="1 KM"/>
+                                    <segment title="2 KM"/>
+                                    <segment title="5 KM"/>
+                                    <segment title="10 KM"/>
+                                    <segment title="20 KM"/>
+                                </segments>
+                                <connections>
+                                    <action selector="distanceChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="9po-jC-6Vg"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bZq-t3-1sz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="0Ya-Yl-col"/>
+                            <constraint firstItem="bZq-t3-1sz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="1VF-SI-pUv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bIh-kc-Qar" secondAttribute="trailing" constant="32" id="60A-h2-CgK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bZq-t3-1sz" secondAttribute="trailing" constant="24" id="9r9-3G-kbD"/>
+                            <constraint firstItem="bIh-kc-Qar" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Doz-Zx-ova"/>
+                            <constraint firstItem="bIh-kc-Qar" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="QJO-Kd-iP6"/>
+                            <constraint firstItem="bZq-t3-1sz" firstAttribute="bottom" secondItem="bIh-kc-Qar" secondAttribute="bottom" constant="8" id="bIO-Cf-3TE"/>
+                            <constraint firstItem="rEk-LJ-2GK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nVC-kP-VYL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rEk-LJ-2GK" secondAttribute="bottom" constant="70" id="pYp-mr-0c1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ac0-IO-oCd"/>
+                    <connections>
+                        <outlet property="distancePicker" destination="rEk-LJ-2GK" id="pEg-2U-GFA"/>
+                        <outlet property="stackView" destination="bIh-kc-Qar" id="RWH-NA-jPm"/>
+                        <outlet property="stackViewBackground" destination="bZq-t3-1sz" id="raR-2o-Kwm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2205.7971014492755" y="63.616071428571423"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="bgl-42-D3W">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ovd-qg-Lqc" customClass="SearchViewController" customModule="InsideThe5K" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VF6-pT-jaQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CDU-o1-KT6">
+                                <rect key="frame" x="57" y="286" width="300" height="324"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your Eircode, so that your home can be located on the map. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhN-TZ-ooq">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="q69-F5-bgC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your Eircode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H6x-db-2L1">
+                                        <rect key="frame" x="0.0" y="120" width="300" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nun-Fd-KX3">
+                                        <rect key="frame" x="0.0" y="174" width="300" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Locate My Home">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchTapped:" destination="Ovd-qg-Lqc" eventType="touchUpInside" id="IZQ-7K-rPH"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlu-vB-G2V">
+                                        <rect key="frame" x="0.0" y="224" width="300" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="bw7-jN-oP2"/>
+                                        </constraints>
+                                        <string key="text">Your eircode is only used to determine the exact location of your home using the Google Places API and not stored or used for any other purpose.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="cqK-6z-nuF"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@thal Productions 2020 © " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBb-EV-I3U">
+                                <rect key="frame" x="57" y="793.5" width="300" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="PQP-dL-ASa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kjC-8t-aAS" firstAttribute="bottom" secondItem="TBb-EV-I3U" secondAttribute="bottom" constant="48" id="Gty-HI-pao"/>
+                            <constraint firstItem="TBb-EV-I3U" firstAttribute="centerX" secondItem="VF6-pT-jaQ" secondAttribute="centerX" id="RdE-0w-2bi"/>
+                            <constraint firstItem="CDU-o1-KT6" firstAttribute="centerX" secondItem="VF6-pT-jaQ" secondAttribute="centerX" id="Xql-JY-mBd"/>
+                            <constraint firstItem="CDU-o1-KT6" firstAttribute="centerY" secondItem="VF6-pT-jaQ" secondAttribute="centerY" id="ifZ-Oo-If0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kjC-8t-aAS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zcz-Ry-DzY"/>
+                    <connections>
+                        <outlet property="eircodeTextField" destination="H6x-db-2L1" id="H2z-zL-Jjk"/>
+                        <outlet property="textLabel" destination="Mlu-vB-G2V" id="6P9-0W-uES"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iHT-AG-icr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188.4057971014495" y="80.357142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LC2-FV-puZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bIi-nk-vIM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D6J-b0-0YY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ovd-qg-Lqc" kind="relationship" relationship="rootViewController" id="ZD6-UE-S0L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqD-CG-Hls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276.81159420289856" y="79.6875"/>
+        </scene>
+    </scenes>
+</document>
