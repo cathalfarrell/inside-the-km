@@ -1,0 +1,2 @@
+# inside-the-km
+An app I built during the COVID-19 lockdown when government advice was to stay at home and only exercise within a 2 km radius of home. This app can locates you on on a map using your Eircode and show the bounds of your 2km circle, or in later weeks, the 5km and 20km boundaries. You can close the app and it will sound a siren alarm when you reach the boundary, with a "You in danger gurl" alert.
