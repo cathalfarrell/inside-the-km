@@ -4,7 +4,8 @@ An app I built during the COVID-19 lockdown when government advice was to stay a
 ## Installation Instructions
 After cloning this repo, you must install the Google Maps SDK and create a Google Cloud Platform Account that provides access to Maps SDK for iOS and Geocoding API.
 Just add your own GoogleService-Info.plist file to the project and replace references in the project files of <YOUR MAP API KEY> with your own API KEY. Install any dependencies via cocoapods if neccessary.
-  
+
+## Screens
 ![Image description](https://cathalfarrell.com/repo-images/inside1.png)
 ![Image description](https://cathalfarrell.com/repo-images/inside2.png)
 ![Image description](https://cathalfarrell.com/repo-images/inside3.png)
